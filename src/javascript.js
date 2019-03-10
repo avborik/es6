@@ -270,7 +270,7 @@ const products = [
      return `The ${painting.name} is ${painting.width} X ${painting.height}`
  })
     console.log(messages)
-*/
+
     //exersize 2 maps
     const cars = [
         {name:'Ford',price:200},
@@ -332,3 +332,43 @@ const channels = [
  // brings HBO and MAX
  console.log(user.channels())
  // brings LIFE, COOCKING CHANNEL AND WOBI
+*/
+ const brands = [
+     {name: 'govnoapple', id:1},
+     {name: 'HP', id:2},
+     {name: 'Samsung', id:3},
+     {name: 'Samsung', id:4}
+ ];
+
+ const result = brands.find(function(brand){
+     return brand.name === 'Samsung'
+ })
+ console.log(result)
+
+ const cars = [
+     {brand: "Ford", price:500, available:2, type: 'Sport car'},
+     {brand: "Nissan", price:200, available:5, type: 'Wagon'},
+     {brand: "Chevy", price:300, available:4, type: 'Sport car'},
+     {brand: "Forsche", price:100, available:1, type: 'Urban'},
+ ];
+ 
+ function getResults(price, type){
+     return cars.find(function(car){
+         return car.price < price
+         && car.available > 0
+         && car.type === type
+     })
+ }
+
+ document.querySelector('.search').addEventListener("click",function(){
+     let price = parseInt(document.querySelector('#price').value)
+     let type = document.querySelector('#type').value
+     let results = getResults(price,type)
+
+     if(results){
+         console.log( `Found ${results.brand} for $ ${results.price}`)
+     } else {
+         console.log('sorry, no car for you, ha ha ha')
+     }
+     
+ })
