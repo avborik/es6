@@ -278,10 +278,57 @@ const products = [
         {name:'Nissan',price:600}
      ]
      function convertPrice() {
-         
+
      }
      const messages = cars.map(function(car){
          return `${car.name} is ${car.price * 1000} rubles`
      })
      console.log(messages)
 
+const products = [
+    {name: 'ipad', category: 'devices', number: 20, price: 200 },
+    {name: 'Sony 3d', category:'TV', number: 0, price: 400},
+    {name: 'E256', category:'Blender', number: 3, price: 50},
+    {name: 'Super vision', category:'TV', number: 7, price: 500},
+    {name: 'iphone 6+', category:'phones', number: 40, price: 2},
+    
+];
+const result = products.filter(function(product){
+    if (product.category === 'TV' && product.number > 0 && product.price > 200){
+        return true
+    } 
+    return false
+})
+console.log(result)
+
+//exercise 1 filters
+const channels = [
+    {name:'HBO',premium:true},
+    {name:'LIFE',premium:false},
+    {name:'Max',premium:true},
+    {name:'Cooking channel',premium:false},
+    {name:'WOBI',premium:false}
+ ];
+
+ const user = {
+    name:'Francis',
+    premium:true,
+    premiumChannels:function(){
+        // GET THE PREMIUM CHANNELS IS "PREMIUM" IS true
+        const $this =this;
+        return channels.filter(function(channel){
+                return channel.premium && this.premium
+        })
+        
+    },
+    channels:function(){
+        // GET THE NON-PREMIUM CHANNELS
+        return channels.filter(function(channel){
+                return channel.premium === false;
+        })
+    }
+ }
+ console.log(user.premiumChannels())
+ // brings HBO and MAX
+ console.log(user.channels())
+ // brings LIFE, COOCKING CHANNEL AND WOBI
