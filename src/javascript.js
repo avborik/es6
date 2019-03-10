@@ -200,7 +200,7 @@ purchases.forEach(function(item){
     total += item.quantity * item.amount
 })
 
-console.log(total) */
+console.log(total) 
 
 // exersize 1 foreach
 const products = [
@@ -228,3 +228,60 @@ const products = [
  })
 
  document.body.insertAdjacentHTML('beforeend', template)
+ 
+
+ const numbers = [1,2,3,4,5];
+ const otherArray = numbers.map(function(number){
+     return number * 10
+ })
+ //var otherArray = [];
+
+//  for(var i = 0; i < numbers.length; i++){
+//      otherArray.push(numbers[i]*10)
+//  }
+ console.log(otherArray)
+
+ const users = [
+     {user: 'Martin Jones', age: 32, eyes: 'brown'},
+     {user: 'Jane Doe', age: 20, eyes: 'blue'},
+     {user: 'Brian Wrecker', age: 40, eyes: 'brown'}
+ ];
+
+ const listOfUsers = users.map(function(user){
+     return user.user
+
+ })
+ listOfUsers.forEach(function(name){
+     const select = document.querySelector('select')
+
+     select.insertAdjacentHTML("afterbegin", `<option value="${name}">${name}</option>`)
+ })
+
+ console.log(listOfUsers)
+
+ //exersize 1 maps
+ const paintings = [
+    {name:'Mona lisa',width:200,height:200},
+    {name:'The scream',width:400,height:600},
+    {name:'The last supper',width:600,height:700}
+ ]
+
+ const messages = paintings.map(function(painting){
+     return `The ${painting.name} is ${painting.width} X ${painting.height}`
+ })
+    console.log(messages)
+*/
+    //exersize 2 maps
+    const cars = [
+        {name:'Ford',price:200},
+        {name:'Nissan',price:400},
+        {name:'Nissan',price:600}
+     ]
+     function convertPrice() {
+         
+     }
+     const messages = cars.map(function(car){
+         return `${car.name} is ${car.price * 1000} rubles`
+     })
+     console.log(messages)
+
