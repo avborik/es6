@@ -56,3 +56,14 @@ cupcake.addEventListener("click",function(){
  container.insertAdjacentHTML('beforeend',message)
  
 });
+
+
+// lecture 211
+function returnEmployee(){
+    const name = "Francis";
+    const age = 21;
+    const position = "Manager";
+
+    console.log(`His name is ${name}, he is ${age} years old and he works as ${position}`)}
+
+returnEmployee();
