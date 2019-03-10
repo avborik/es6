@@ -124,7 +124,7 @@ addUser('Jane', 'Doe');
 
 console.log("This\nis\nawesome\xa0")
 //ES6
-console.log(String.raw`This is awesome`);   */
+console.log(String.raw`This is awesome`);   
 
 //exersize 1 templates
 const name = "Borik";
@@ -156,3 +156,75 @@ const players = [
  ul.insertAdjacentHTML("beforeend",list)
 
  
+ // ForEach
+ const artists = ['Claption', 'U2', 'Bruno Mars', 'Lamar'];
+
+//  for(var i = 0; i <artists.length; i++){
+//      console.log(artists[i])
+//  }
+
+// ES6
+
+artists.forEach(function(artist){
+console.log(artist)
+})
+
+// forEach 2
+const names = ['francis','lisa','marions','ron'];
+let template = '';
+
+names.forEach(function(name){
+  //  document.body.insertAdjacentHTML("afterbegin", `<div>Hi, my name is ${name}</div>`)
+template += `<div>Hi, my name is ${name}</div>`
+});
+
+document.body.insertAdjacentHTML('beforeend', template)
+
+//forEach 3
+var purchases = [
+    {quantity: 2, amount: 100},
+    {quantity: 5, amount: 100},
+    {quantity: 10, amount: 100}
+]
+
+var total = 0;
+
+for(var i = 0; i < purchases.length; i++){
+    total += purchases[i].quantity * purchases[i].amount
+}
+console.log(total)
+total = 0;
+
+//ES6
+purchases.forEach(function(item){
+    total += item.quantity * item.amount
+})
+
+console.log(total) */
+
+// exersize 1 foreach
+const products = [
+    {name:'Iphone',price:200},
+    {name:'Motorola',price:70},
+    {name:'Samsung',price:150},
+    {name:'Sony',price:98},
+    {name:'Windows pone',price:10}
+ ];
+
+ let template = "";
+ 
+ products.forEach(function(product){
+     function discount(){
+         if(product.price < 100){
+             return `<span>On sale !!</span>`
+         }
+     }
+    
+     template += `<div class="product"> 
+      <h1>${product.name}</h1>
+      ${discount()}
+      <strong>Price: $ ${product.price} </strong>
+      </div>`
+ })
+
+ document.body.insertAdjacentHTML('beforeend', template)
