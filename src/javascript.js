@@ -1,6 +1,6 @@
 
 
-var divs = document.getElementsByTagName('div');
+/*var divs = document.getElementsByTagName('div');
 for(let i = 0; i < divs.length; i++) {
     // node[i] => div 0
     // node[i] => div 1
@@ -67,3 +67,92 @@ function returnEmployee(){
     console.log(`His name is ${name}, he is ${age} years old and he works as ${position}`)}
 
 returnEmployee();
+
+// template strings 2
+
+const names = ["James", "Rone", "Ace"]
+
+console.log(`The name is ${names}`)
+console.log(`The name is ${names[Math.floor(Math.random() * names.length) + 1]}`)
+
+const user = {
+    name: 'Boris',
+    age: 28,
+    position: 'Senior developer king'
+}
+console.log(`My name is ${user.name}, I am ${user.age}, I work as ${user.position}`)
+
+function request(page, id){
+    var URL = "http://server.com/" + page + "/" + id;
+
+    const URL1 = `http://server.com/${page}/${id}`;
+
+    console.log(URL)
+    console.log(URL1)
+}
+
+request('pages', 5)
+
+// temlate strings 3
+var list = document.querySelector('.user_list')
+
+function addUser (name, lastname){
+    /*var template = '';
+
+   template += '<div class="user">'
+   template += '<div>' + name + '</div>'
+   template += '<div>' + lastname + '</div>'
+   template += '</div>'
+
+   
+
+   // ES6
+   var template =`
+   <div class="user">
+      <div>${name}</div>
+      <div>${lastname}</div>
+      </div>  
+   `;
+   list.insertAdjacentHTML("beforeend", template)
+
+}
+
+addUser('Francis','Jones');
+addUser('Jane', 'Doe');
+
+// Template strings 4
+
+console.log("This\nis\nawesome\xa0")
+//ES6
+console.log(String.raw`This is awesome`);   */
+
+//exersize 1 templates
+const name = "Borik";
+const lastname = "DevMaster";
+let age = 28;
+let profession = "Web developer";
+let salary = 5000;
+
+console.log(`My name is ${name}, i'm ${age} years old, I work as ${profession} and make ${salary}`);
+
+// exersize 2 templates
+const ul = document.querySelector('.players');
+const players = [
+    {jersey:56,name:"Djounte Murray",position:"Point guard",PPG:2.6},
+    {jersey:98,name:"Dennis Rodman",position:"Small Forward",PPG:10.8},
+    {jersey:1,name:"Michael Jordan",position:"Small Forward",PPG:345.6},
+    {jersey:2,name:"Lebron James",position:"Shooting Guard",PPG:26.7},
+    {jersey:33,name:"Patrick Ewing",position:"Center",PPG:20.2}
+ ];
+
+ let list = '';
+
+ for(let i = 0; i < players.length; i++) {
+     let player = players[i];
+
+     list += `<li>${player.jersey} - ${player.name} -- Position: ${player.position} -- PPG: ${player.PPG}</li>`
+ }
+
+ ul.insertAdjacentHTML("beforeend",list)
+
+ 
