@@ -372,3 +372,115 @@ const channels = [
      }
      
  })
+
+ const students = [
+     {name: "Francis", grade: 6},
+     {name: "Martin", grade: 4},
+     {name: "Marta", grade: 1},
+ ]
+//  let allStudentsPassedTheCourse = students.every(function(student){
+//     return student.grade >= 6;
+//  })
+//  console.log(allStudentsPassedTheCourse);
+//every & some
+ let allStudentsPassedTheCourse = students.some(function(student){
+    return student.grade >= 6;
+ })
+ console.log(allStudentsPassedTheCourse);
+
+ //let allStudentsPassedTheCourse = false;
+
+//  for (let i = 0; i < students.length; i++){
+//      let student = students[i];
+
+//      if(student.grade < 6){
+//          allStudentsPassedTheCourse = false;
+//          console.log("not Passed. ahah ha");
+//          break;
+        
+//      }else{
+//          allStudentsPassedTheCourse = true;
+//          console.log("wow, all passed, lets go drink");
+//      }
+//  }
+//every & some
+// let allStudentsPassedTheCourse = false;
+
+//  for (let i = 0; i < students.length; i++){
+//      let student = students[i];
+
+//      if(student.grade >= 6){
+//          allStudentsPassedTheCourse = true;
+//          console.log("not Passed. ahah ha");
+//          break;
+        
+//      }else{
+//          allStudentsPassedTheCourse = false;
+//          console.log("wow, all passed, lets go drink");
+//      }
+//  }
+
+// reduce
+
+const previous = 200;
+const current = [
+    {expense: 'Guitar', amount:200},
+    {expense: 'Mic', amount:100},
+    {expense: 'Starp', amount:100},
+]
+
+const results = current.reduce(function(sum, expence){
+return sum + expence.amount 
+},previous)//starting point
+
+console.log(results)
+
+// reduce 2
+const users = [
+    {name: "Francis", lastname: 'Norton', age: 25},
+    {name: "Marta", lastname: 'Norton', age: 25},
+    {name: "rob", lastname: 'Norton', age: 25},
+]
+
+const name = users.reduce(function(start, user){
+
+    start.push(user.name)
+        return start;
+},[]) // return array
+
+console.log(name)
+
+// reduce exersize 1
+const trips = [
+    {to:'Brazil',distance:1000},
+    {to:'Chine',distance: 2500},
+    {to:'India',distance: 3000}
+ ]
+
+ const km = trips.reduce(function(sum, to){
+    return sum + to.distance; 
+    },0)//starting point
+    
+    console.log(km)
+// exersize 2 reduce
+const computers = [
+    {type:'Laptop',price:124, os:'Windows'},
+    {type:'Desk',price:124, os:'Mac'},
+    {type:'Desk',price:124, os:'Windows'},
+    {type:'Laptop',price:124, os:'Mac'},
+    {type:'Laptop',price:124, os:'Windows'},
+ ];
+
+ let ostypes = computers.reduce(function(start, item){
+     //1 way
+    // if (item.os === 'Mac'){
+    //     return {mac:start.mac + 1, windows:start.windows}
+    // }else{
+    //     return {mac:start.mac, windows:start.windows + 1}
+    // }
+     //2 way
+     return item.os === 'Mac'? {mac:start.mac + 1, windows:start.windows}:
+     {mac:start.mac, windows:start.windows + 1}
+
+ },{mac:0, windows:0})
+    console.log(ostypes)
