@@ -333,60 +333,60 @@ const channels = [
  console.log(user.channels())
  // brings LIFE, COOCKING CHANNEL AND WOBI
 */
- const brands = [
-     {name: 'govnoapple', id:1},
-     {name: 'HP', id:2},
-     {name: 'Samsung', id:3},
-     {name: 'Samsung', id:4}
- ];
+//  const brands = [
+//      {name: 'govnoapple', id:1},
+//      {name: 'HP', id:2},
+//      {name: 'Samsung', id:3},
+//      {name: 'Samsung', id:4}
+//  ];
 
- const result = brands.find(function(brand){
-     return brand.name === 'Samsung'
- })
- console.log(result)
+//  const result = brands.find(function(brand){
+//      return brand.name === 'Samsung'
+//  })
+//  console.log(result)
 
- const cars = [
-     {brand: "Ford", price:500, available:2, type: 'Sport car'},
-     {brand: "Nissan", price:200, available:5, type: 'Wagon'},
-     {brand: "Chevy", price:300, available:4, type: 'Sport car'},
-     {brand: "Forsche", price:100, available:1, type: 'Urban'},
- ];
+//  const cars = [
+//      {brand: "Ford", price:500, available:2, type: 'Sport car'},
+//      {brand: "Nissan", price:200, available:5, type: 'Wagon'},
+//      {brand: "Chevy", price:300, available:4, type: 'Sport car'},
+//      {brand: "Forsche", price:100, available:1, type: 'Urban'},
+//  ];
  
- function getResults(price, type){
-     return cars.find(function(car){
-         return car.price < price
-         && car.available > 0
-         && car.type === type
-     })
- }
+//  function getResults(price, type){
+//      return cars.find(function(car){
+//          return car.price < price
+//          && car.available > 0
+//          && car.type === type
+//      })
+//  }
 
- document.querySelector('.search').addEventListener("click",function(){
-     let price = parseInt(document.querySelector('#price').value)
-     let type = document.querySelector('#type').value
-     let results = getResults(price,type)
+//  document.querySelector('.search').addEventListener("click",function(){
+//      let price = parseInt(document.querySelector('#price').value)
+//      let type = document.querySelector('#type').value
+//      let results = getResults(price,type)
 
-     if(results){
-         console.log( `Found ${results.brand} for $ ${results.price}`)
-     } else {
-         console.log('sorry, no car for you, ha ha ha')
-     }
+//      if(results){
+//          console.log( `Found ${results.brand} for $ ${results.price}`)
+//      } else {
+//          console.log('sorry, no car for you, ha ha ha')
+//      }
      
- })
+//  })
 
- const students = [
-     {name: "Francis", grade: 6},
-     {name: "Martin", grade: 4},
-     {name: "Marta", grade: 1},
- ]
+//  const students = [
+//      {name: "Francis", grade: 6},
+//      {name: "Martin", grade: 4},
+//      {name: "Marta", grade: 1},
+//  ]
 //  let allStudentsPassedTheCourse = students.every(function(student){
 //     return student.grade >= 6;
 //  })
 //  console.log(allStudentsPassedTheCourse);
 //every & some
- let allStudentsPassedTheCourse = students.some(function(student){
-    return student.grade >= 6;
- })
- console.log(allStudentsPassedTheCourse);
+//  let allStudentsPassedTheCourse = students.some(function(student){
+//     return student.grade >= 6;
+//  })
+//  console.log(allStudentsPassedTheCourse);
 
  //let allStudentsPassedTheCourse = false;
 
@@ -422,56 +422,56 @@ const channels = [
 
 // reduce
 
-const previous = 200;
-const current = [
-    {expense: 'Guitar', amount:200},
-    {expense: 'Mic', amount:100},
-    {expense: 'Starp', amount:100},
-]
+// const previous = 200;
+// const current = [
+//     {expense: 'Guitar', amount:200},
+//     {expense: 'Mic', amount:100},
+//     {expense: 'Starp', amount:100},
+// ]
 
-const results = current.reduce(function(sum, expence){
-return sum + expence.amount 
-},previous)//starting point
+// const results = current.reduce(function(sum, expence){
+// return sum + expence.amount 
+// },previous)//starting point
 
-console.log(results)
+// console.log(results)
 
-// reduce 2
-const users = [
-    {name: "Francis", lastname: 'Norton', age: 25},
-    {name: "Marta", lastname: 'Norton', age: 25},
-    {name: "rob", lastname: 'Norton', age: 25},
-]
+// // reduce 2
+// const users = [
+//     {name: "Francis", lastname: 'Norton', age: 25},
+//     {name: "Marta", lastname: 'Norton', age: 25},
+//     {name: "rob", lastname: 'Norton', age: 25},
+// ]
 
-const name = users.reduce(function(start, user){
+// const name = users.reduce(function(start, user){
 
-    start.push(user.name)
-        return start;
-},[]) // return array
+//     start.push(user.name)
+//         return start;
+// },[]) // return array
 
-console.log(name)
+// console.log(name)
 
-// reduce exersize 1
-const trips = [
-    {to:'Brazil',distance:1000},
-    {to:'Chine',distance: 2500},
-    {to:'India',distance: 3000}
- ]
+// // reduce exersize 1
+// const trips = [
+//     {to:'Brazil',distance:1000},
+//     {to:'Chine',distance: 2500},
+//     {to:'India',distance: 3000}
+//  ]
 
- const km = trips.reduce(function(sum, to){
-    return sum + to.distance; 
-    },0)//starting point
+//  const km = trips.reduce(function(sum, to){
+//     return sum + to.distance; 
+//     },0)//starting point
     
-    console.log(km)
-// exersize 2 reduce
-const computers = [
-    {type:'Laptop',price:124, os:'Windows'},
-    {type:'Desk',price:124, os:'Mac'},
-    {type:'Desk',price:124, os:'Windows'},
-    {type:'Laptop',price:124, os:'Mac'},
-    {type:'Laptop',price:124, os:'Windows'},
- ];
+//     console.log(km)
+// // exersize 2 reduce
+// const computers = [
+//     {type:'Laptop',price:124, os:'Windows'},
+//     {type:'Desk',price:124, os:'Mac'},
+//     {type:'Desk',price:124, os:'Windows'},
+//     {type:'Laptop',price:124, os:'Mac'},
+//     {type:'Laptop',price:124, os:'Windows'},
+//  ];
 
- let ostypes = computers.reduce(function(start, item){
+//  let ostypes = computers.reduce(function(start, item){
      //1 way
     // if (item.os === 'Mac'){
     //     return {mac:start.mac + 1, windows:start.windows}
@@ -479,8 +479,31 @@ const computers = [
     //     return {mac:start.mac, windows:start.windows + 1}
     // }
      //2 way
-     return item.os === 'Mac'? {mac:start.mac + 1, windows:start.windows}:
-     {mac:start.mac, windows:start.windows + 1}
+//      return item.os === 'Mac'? {mac:start.mac + 1, windows:start.windows}:
+//      {mac:start.mac, windows:start.windows + 1}
 
- },{mac:0, windows:0})
-    console.log(ostypes)
+//  },{mac:0, windows:0})
+//     console.log(ostypes)
+
+
+// const names = ["Jane","Thomas","James"];
+//  for(let name of names){
+//      console.log(name)
+//  }
+
+// const numbers = [10,20,30,40,50];
+// let total = 0;
+
+// for(let number of numbers){
+//     total += number
+// }
+// console.log(total);
+
+// const value = (name,age)=>{
+//     return `My name is ${name} and age ${age}`
+// }
+
+// console.log(value("James",45));
+
+const value = (x,y) => x + y ;
+console.log(value(1,2))
