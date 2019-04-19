@@ -508,14 +508,22 @@ const channels = [
 // const value = (x,y) => x + y ;
 // console.log(value(1,2))
 
-const cars = {
-    brands:['Ford','Audi','BMW'],
-    category:'Sport car',
-    message:function(){
-        return this.brands.map((brand) => {
-            console.log(`${brand} is a ${this.category}`)
-        })
-    }
-}
+// const cars = {
+//     brands:['Ford','Audi','BMW'],
+//     category:'Sport car',
+//     message:function(){
+//         return this.brands.map((brand) => {
+//             console.log(`${brand} is a ${this.category}`)
+//         })
+//     }
+// }
 
-cars.message();
+// cars.message();
+
+//exersize 2
+
+const names= ["James","Ron","Lisa","Tommy"];
+let randomName = items => items[Math.floor(Math.random()*items.length)]
+let randomNumber = (maxNumber,minNumber) => Math.floor(Math.random() * maxNumber) + minNumber;
+
+console.log(`${randomName(names)} magic number is + ${randomNumber(5,2)}`)
