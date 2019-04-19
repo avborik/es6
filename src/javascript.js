@@ -505,5 +505,17 @@ const channels = [
 
 // console.log(value("James",45));
 
-const value = (x,y) => x + y ;
-console.log(value(1,2))
+// const value = (x,y) => x + y ;
+// console.log(value(1,2))
+
+const cars = {
+    brands:['Ford','Audi','BMW'],
+    category:'Sport car',
+    message:function(){
+        return this.brands.map((brand) => {
+            console.log(`${brand} is a ${this.category}`)
+        })
+    }
+}
+
+cars.message();
