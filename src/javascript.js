@@ -579,7 +579,51 @@ const channels = [
 // }
 // cars()
 // exercise
-function greeting(name = 'user'){
-    return `Hello ${name}`;
- }
- console.log(greeting("James"))
+// function greeting(name = 'user'){
+//     return `Hello ${name}`;
+//  }
+//  console.log(greeting("James"))
+// rest operator
+// function hey(){
+//     console.log('hey')
+// }
+
+// function args(...args){
+//     console.log(`My name is ${args[0]}, I am ${args[1]}, my eyes are ${args[2]}`)
+// }
+// args("Bearka","20","green")
+
+// // spread operator
+// const brands = ["Ford","Nissan"];
+// const otherBrand = ["Audi","BMW"];
+
+// // const newArray = brands.concat(otherBrand);
+// // newArray.push('Other brand')
+// const newArray = [...brands,...otherBrand,'Other brand'];
+
+// console.log(newArray)
+
+// function totalDistance(distance1,distance2,distance3){
+//     var distances = [distance1,distance2,distance3]
+//     var total = 0;
+//     for(var i = 0; i < distances.length;i++){
+//         total += distances[i]
+//     }
+//     return total;
+//  }
+//  console.log(totalDistance(200,100,200))
+// const totalDistance = (...distances) => {
+//     return distances.reduce((sum,distance)=> sum + distance ,0);
+//  };
+//  console.log(totalDistance(200,100,200));
+
+//  function showItems(arg1,...arg2){
+//     // var arr = [arg2,arg3].concat(arg1)
+//     // console.log(arr)
+//     let arr =[...arg1,...arg2];
+//     console.log(arr)
+  
+
+//  }
+//  showItems(["dogs","cats"],"turtles","sharks");
+
