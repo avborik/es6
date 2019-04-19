@@ -657,27 +657,86 @@ const channels = [
 // })
 
 // console.log(car)
-class Car {
-    constructor(){
-        this.condition = 'new';
-        this.wheels = '4';
-        this.avail = () => {console.log('avail')}
+// class Car {
+//     constructor(){
+//         this.condition = 'new';
+//         this.wheels = '4';
+//         this.avail = () => {console.log('avail')}
 
-    }
+//     }
 
-    otherfunction(){
-        console.log('hey')
-    }
-}
+//     otherfunction(){
+//         console.log('hey')
+//     }
+// }
 
-class Ford extends Car {
-    constructor(){
-        super();
-    }
-}
+// class Ford extends Car {
+//     constructor(){
+//         super();
+//     }
+// }
 
-const car = new Car();
-const ford = new Ford();
+// const car = new Car();
+// const ford = new Ford();
     
-ford.color = 'red';
-console.log(ford)
+// ford.color = 'red';
+// console.log(ford)
+
+// Destructuring
+// const user = {
+//     name:"Francis",
+//     lastname:"Jones",
+//     age:25
+// };
+
+// const message = ({name,lastname,age}) => {
+//     console.log(`my name is ${name} ${lastname}, age ${age}`)
+// }
+
+// message(user)
+// const {name} = user;
+// const {lastname} = user;
+// const {age} = user;
+
+// const name = user.name
+// var name = user.name;
+// var lastname = user.lastname;
+// var age = user.age;
+
+// console.log(name)
+// console.log(lastname)
+// console.log(age)
+
+// const cars = [
+//     'golf',
+//     'camaro',
+//     'a5'
+// ];
+
+//const camaro = cars[1];
+// const [golf,...rest] = cars;
+// console.log(camaro)
+// console.log(golf)
+// console.log(a5)
+
+// const users = {
+//   names:['francis','martha','ray']
+// }
+
+// const {names:[name1]} = users;
+
+// console.log(name1)
+
+// function createCar({brand,model,color,type,year}){
+
+// }
+
+// const car = {
+//     brand:"ford",
+//     model:"focus",
+//     color:"red",
+//     year:"2015",
+//     type:"fast" 
+// }
+
+// createCar(car)
