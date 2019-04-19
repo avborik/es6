@@ -558,10 +558,28 @@ const channels = [
 // console.log(characterObj.getFriends())
 
 // // exercise
-var name = "Francis";
-var lastname = "Jones"
-var age = 23;
-var createObject = (name,lastname,age) => {
-   return { name,lastname,age,}
-}
-console.log(createObject(name,lastname,age))
+// var name = "Francis";
+// var lastname = "Jones"
+// var age = 23;
+// var createObject = (name,lastname,age) => {
+//    return { name,lastname,age,}
+// }
+// console.log(createObject(name,lastname,age))
+
+// function randomBrand(){
+//     const brands = ['ford','nissan', 'vw']
+//     return brands[Math.floor(Math.random() * brands.length)]
+// }
+
+// function cars(brand = randomBrand()){
+//     if(!brand){
+//         brand = "Ford"
+//     }
+//     console.log(`my brand is ${brand}`)
+// }
+// cars()
+// exercise
+function greeting(name = 'user'){
+    return `Hello ${name}`;
+ }
+ console.log(greeting("James"))
