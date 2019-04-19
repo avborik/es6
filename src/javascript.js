@@ -522,8 +522,46 @@ const channels = [
 
 //exersize 2
 
-const names= ["James","Ron","Lisa","Tommy"];
-let randomName = items => items[Math.floor(Math.random()*items.length)]
-let randomNumber = (maxNumber,minNumber) => Math.floor(Math.random() * maxNumber) + minNumber;
+// const names= ["James","Ron","Lisa","Tommy"];
+// let randomName = items => items[Math.floor(Math.random()*items.length)]
+// let randomNumber = (maxNumber,minNumber) => Math.floor(Math.random() * maxNumber) + minNumber;
 
-console.log(`${randomName(names)} magic number is + ${randomNumber(5,2)}`)
+// console.log(`${randomName(names)} magic number is + ${randomNumber(5,2)}`)
+
+// object literals
+
+// const request = (url, data) => {
+//     $.ajax({
+//         method:'post', url,data
+//     })
+
+//     request('http:// request.com',{car:ford})
+// }
+
+// const createCharacter = function(name,powers){
+//     return{
+//         name:name,
+//         powers:powers,
+//         getFriends:function(){
+//             return 'Luis lane'
+//         },
+//         getEnemies(){
+//             return'Skeletor'
+//         }
+//     }
+// }
+
+// const characterObj = createCharacter('Superman','Fly');
+
+// console.log(characterObj)
+
+// console.log(characterObj.getFriends())
+
+// // exercise
+var name = "Francis";
+var lastname = "Jones"
+var age = 23;
+var createObject = (name,lastname,age) => {
+   return { name,lastname,age,}
+}
+console.log(createObject(name,lastname,age))
