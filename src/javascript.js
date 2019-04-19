@@ -626,4 +626,58 @@ const channels = [
 
 //  }
 //  showItems(["dogs","cats"],"turtles","sharks");
+// classes es5
+// function Car(){}
+// var car = new Car();
 
+// Car.prototype.status = 'New';
+// Car.prototype.wheels = 4;
+// Car.prototype.avail = function(){
+//     console.log('available')
+// }
+
+// var ford = new Car();
+
+// console.log(ford.__proto__)
+
+//es6
+// class Car {
+//     constructor(status,wheels,avail){
+//         this.status = status;
+//         this.wheels = wheels;
+//         this.avail = avail;
+
+//     }
+// }
+
+// const car = new Car({
+//     status: 'New',
+//     wheels: 4,
+//     avail:()=>{console.log('avail')}
+// })
+
+// console.log(car)
+class Car {
+    constructor(){
+        this.condition = 'new';
+        this.wheels = '4';
+        this.avail = () => {console.log('avail')}
+
+    }
+
+    otherfunction(){
+        console.log('hey')
+    }
+}
+
+class Ford extends Car {
+    constructor(){
+        super();
+    }
+}
+
+const car = new Car();
+const ford = new Ford();
+    
+ford.color = 'red';
+console.log(ford)
