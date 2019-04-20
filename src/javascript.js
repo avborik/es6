@@ -740,3 +740,31 @@ const channels = [
 // }
 
 // createCar(car)
+
+// let promise = new Promise((resolved, rejected)=>{
+//     setTimeout(()=>{
+//         rejected();
+//     },5000)
+ 
+// })
+
+// promise.then(()=>console.log('finished'))
+// .then(()=>console.log('finished 2'))
+// .catch(()=>console.log('damn'))
+
+// const url = 'https://jsonplaceholder.typicode.com/posts/';
+
+// // console.log(fetch(url))
+// fetch(url,{
+//     method: 'POST',
+//     headers: {
+//         'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({title:'some dum title'}),
+//     mode: 'cors',
+//     redirect: xxx
+// })
+// .then(response => response.json())
+// .then(data => console.log(data))
+// .catch(error => console.log('fucked up',errors))
+
