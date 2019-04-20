@@ -768,3 +768,27 @@ const channels = [
 // .then(data => console.log(data))
 // .catch(error => console.log('fucked up',errors))
 
+// console.log("foo".repeat(3 * 10))
+
+// var word = "camera";
+// // console.log(word.indexOf('cam'))
+// // console.log(word.startWith('cam',1))
+// // console.log(word.endsWith('era'))
+// console.log(word.includes('ame'))
+
+// console.log(Number.isSafeInteger(200))
+
+// console.log(Number.isSafeInteger(43))
+
+// console.log(Number.isSafeInteger(0.200))
+
+// console.log(Number.isInteger(200))
+
+console.log(Math.trunc(42.8))
+
+console.log(Math.trunc(0.1))
+
+console.log(Math.trunc(-0.1))
+
+
+
