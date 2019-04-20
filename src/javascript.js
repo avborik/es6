@@ -784,11 +784,11 @@ const channels = [
 
 // console.log(Number.isInteger(200))
 
-console.log(Math.trunc(42.8))
+// console.log(Math.trunc(42.8))
 
-console.log(Math.trunc(0.1))
+// console.log(Math.trunc(0.1))
 
-console.log(Math.trunc(-0.1))
+// console.log(Math.trunc(-0.1))
 
 
 
